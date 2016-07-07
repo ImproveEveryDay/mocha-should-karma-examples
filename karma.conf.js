@@ -53,8 +53,9 @@ module.exports = function(config) {
 	  reporters: ['dots', 'coverage'],
 	  coverageReporter: {
 		  reporters:[
-			  {type: 'text-summary'},
-			  {type: 'clover', dir: 'test-reports', subdir: '.', file: 'clover.xml'}
+			  {type: 'text-summary'},  //print final coverage results in the console
+			  {type: 'clover', dir: 'coverage', subdir: '.', file: 'clover.xml'}, //integrate with bamboo
+			  {type: 'html', dir:'coverage', subdir: '.'}
 		  ]
 	  },
 
