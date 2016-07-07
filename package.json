@@ -16,6 +16,7 @@
     "should": "~6.0.1"
   },
   "scripts":{
-    "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter"
+    "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter",
+    "test": "karma start karma.conf.js --single-run"
   }
 }
