@@ -14,5 +14,8 @@
     "karma-mocha": "^0.1.10",
     "mocha-bamboo-reporter": "^1.1.1",
     "should": "~6.0.1"
+  },
+  "scripts":{
+    "bamboo": "node node modules/mocha/bin/mocha -R mocha-bamboo-reporter"
   }
 }
