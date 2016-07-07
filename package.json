@@ -9,7 +9,7 @@
   "devDependencies": {
     "bower": "^1.7.9",
     "istanbul": "^0.4.4",
-    "karma": "^0.12.31",
+    "karma": "^1.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
     "karma-mocha": "^0.1.10",
