@@ -12,6 +12,7 @@
     "karma": "^1.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
     "karma-mocha": "^0.1.10",
     "mocha-bamboo-reporter": "^1.1.1",
     "should": "~6.0.1"
