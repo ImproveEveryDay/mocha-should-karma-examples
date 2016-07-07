@@ -15,7 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-		"bower_components/should/should.js",
+		/*"bower_components/should/should.js",*/
+		"node_modules/should/should.js",
 		"assertion/assertion_email.js",
 		"src/util.js",
 		"test/*.test.js"
