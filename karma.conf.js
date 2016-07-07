@@ -39,15 +39,23 @@ module.exports = function(config) {
 		  'karma-coverage'
 	  ],
 
-	  overageReporter: {
-		  // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
-		  type: 'lcov',
-		  dir: 'coverage/'
-	  },
+/*	  overageReporter: {
+	   // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
+	   type: 'lcov',
+	   dir: 'coverage/'
+	   },*/
+
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
+   /* reporters: ['progress','coverage'],*/
+	  reporters: ['dots', 'coverage'],
+	  coverageReporter: {
+		  reporters:[
+			  {type: 'text-summary'},
+			  {type: 'clover', dir: 'test-reports', subdir: '.', file: 'clover.xml'}
+		  ]
+	  },
 
 
     // web server port
