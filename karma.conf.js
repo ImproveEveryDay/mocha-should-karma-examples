@@ -17,8 +17,8 @@ module.exports = function(config) {
     files: [
 		/*"bower_components/should/should.js",*/
 		"node_modules/should/should.js",
-		"assertion/assertion_email.js",
-		"src/util.js",
+		"assertion/*.js",
+		"src/*.js",
 		"test/*.test.js"
     ],
 
@@ -31,9 +31,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 	  preprocessors: {
+		  //source files that you wanna generate coverage for;do not include tests or libraries
+		  //these files will be instrumented by Istanbul
 		  'assertion/*.js': 'coverage',
 		  'src/*.js': 'coverage'
 	  },
+
 	  plugins: [
 		  'karma-mocha',
 		  'karma-chrome-launcher',
@@ -41,22 +44,17 @@ module.exports = function(config) {
 		  'karma-firefox-launcher'
 	  ],
 
-/*	  overageReporter: {
-	   // cf. http://gotwarlost.github.com/istanbul/public/apidocs/
-	   type: 'lcov',
-	   dir: 'coverage/'
-	   },*/
-
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-   /* reporters: ['progress','coverage'],*/
-	  reporters: ['dots', 'coverage'],
+	  reporters: ['dots', 'progress', 'coverage'],
 	  coverageReporter: {
+		  dir: 'coverage',
+		  subdir: '.',
 		  reporters:[
 			  {type: 'text-summary'},  //print final coverage results in the console
-			  {type: 'clover', dir: 'coverage', subdir: '.', file: 'clover.xml'}, //integrate with bamboo
-			  {type: 'html', dir:'coverage', subdir: '.'}
+			  {type: 'clover', file: 'clover.xml'}, //integrate with bamboo
+			  {type: 'html'}
 		  ]
 	  },
 

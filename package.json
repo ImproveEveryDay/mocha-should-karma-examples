@@ -20,7 +20,8 @@
   },
   "scripts": {
     "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter",
-    "test": "karma start karma.conf.js --single-run",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "test": "karma start karma.conf.js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
   }
 }

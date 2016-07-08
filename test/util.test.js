@@ -7,7 +7,7 @@ try {
 }catch(e){}
 describe('addOrTimes tests', function(){
 	it('test add', function(){
-		Util.addOrTimes(1, 2, "+").should.be.equal(3);
+		Util.addOrTimes(1, 2, "+").should.be.equal(6);
 	});
 	it('test times', function(){
 		Util.addOrTimes(3, 2, "*").should.be.equal(6);
