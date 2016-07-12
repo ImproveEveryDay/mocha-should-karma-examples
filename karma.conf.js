@@ -41,13 +41,18 @@ module.exports = function(config) {
 		  'karma-mocha',
 		  'karma-chrome-launcher',
 		  'karma-coverage',
+		  'karma-mocha-reporter',
+		  'karma-bamboo-reporter',
 		  'karma-firefox-launcher'
 	  ],
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-	  reporters: ['dots', 'progress', 'coverage'],
+	  reporters: ['bamboo', 'mocha', 'dots', 'progress', 'coverage'],
+	  bambooReporter: {
+		 filename: 'karma.mocha.json'
+	  },
 	  coverageReporter: {
 		  dir: 'coverage',
 		  subdir: '.',
