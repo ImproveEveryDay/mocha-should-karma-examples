@@ -18,7 +18,11 @@
     "karma-mocha-reporter": "^2.0.4",
     "mocha": "^2.5.3",
     "mocha-bamboo-reporter": "^1.1.1",
-    "should": "~6.0.1"
+    "should": "~6.0.1",
+	    "sinon": "^1.17.4",
+		"jasmine-core": "^2.4.1",
+		"karma-sinon": "^1.0.5",
+		"karma-jasmine": "^1.0.2"
   },
   "scripts": {
     "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter",
